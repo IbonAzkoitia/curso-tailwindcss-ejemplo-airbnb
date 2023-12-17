@@ -18,6 +18,6 @@
 	<link rel="stylesheet" href="assets/css/style-production.css" />
 </head>
 <body>
-
+<?php require 'components/header.php'; ?>
 </body>
 </html>
