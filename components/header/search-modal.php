@@ -1,3 +1,44 @@
+<?php
+	$destinos = [
+		[
+			'imagen' => 'busqueda-flexible',
+			'texto' => 'Búsqueda flexible'
+		],
+		[
+			'imagen' => 'sudamerica',
+			'texto' => 'Sudamérica'
+		],
+		[
+			'imagen' => 'italia',
+			'texto' => 'Italia'
+		],
+		[
+            'imagen' => 'estados-unidos',
+            'texto' => 'Estados Unidos'
+        ],
+		[
+			'imagen' => 'portugal',
+			'texto' => 'Portugal'
+		],
+		[
+			'imagen' => 'caribe',
+			'texto' => 'Caribe'
+		],
+		[
+			'imagen' => 'reino-unido',
+			'texto' => 'Reino Unido'
+		],
+		[
+			'imagen' => 'africa',
+			'texto' => 'África'
+		],
+		[
+			'imagen' => 'alemania',
+			'texto' => 'Alemania'
+		]
+	]
+?>
+
 <div class="absolute top-0 w-full h-full bg-gray-50 flex flex-col justify-between"
 	x-show="searchModal"
     x-data="{searchModalTabs: 1}">
@@ -25,8 +66,36 @@
 		</div>
 	</div>
 
-	<div x-show="searchModalTabs === 1">
-		Alojamientos
+	<div class="px-3 flex-grow" x-show="searchModalTabs === 1">
+
+		<!-- Destinos -->
+		<div class="searchCard overflow-hidden">
+			<div class="text-xl font-extrabold">
+				¿Dónde quieres ir?
+			</div>
+
+			<div class="my-4 p-4 border border-gray-400 rounded-xl flex items-center gap-2 text-sm font-semibold text-airbnb-gray-light">
+				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5 text-black">
+					<path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+				</svg>
+
+				Buscar destinos
+			</div>
+
+			<div class="-mx-6 pl-6 flex flex-nograp overflow-x-scroll no-scrollbar gap-5">
+				<?php foreach ( $destinos as $destino ) : ?>
+				<div class="w-32 flex-none">
+					<button class="border border-gray-300 rounded-xl">
+						<img class="rounded-xl" src="/assets/images/search/<?php echo $destino['imagen']; ?>.jpg" alt="">
+					</button>
+					<div class="text-sm font-medium">
+						<?php echo $destino['texto']; ?>
+					</div>
+				</div>
+				<?php endforeach; ?>
+			</div>
+		</div>
+		<!-- end Destinos -->
 	</div>
 
 	<div class="py-2 px-6 bg-white flex items-center justify-between">
