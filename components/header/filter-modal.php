@@ -9,19 +9,19 @@
 
     $propiedades = [
         [
-            'imagen' => 'https://a0.muscache.com/pictures/4d7580e1-4ab2-4d26-a3d6-97f9555ba8f9.jpg',
+            'imagen' => 'casa',
             'texto' => 'Casa',
         ],
 	    [
-		    'imagen' => 'https://a0.muscache.com/pictures/21cfc7c9-5457-494d-9779-7b0c21d81a25.jpg',
+		    'imagen' => 'apartamento',
 		    'texto' => 'Apartamento',
 	    ],
 	    [
-		    'imagen' => 'https://a0.muscache.com/pictures/6f261426-2e47-4c91-8b1a-7a847da2b21b.jpg',
+		    'imagen' => 'casa-invitados',
 		    'texto' => 'Casa de invitados',
 	    ],
 	    [
-		    'imagen' => 'https://a0.muscache.com/pictures/64b27fed-56a1-4f03-950a-d8da08efb428.jpg',
+		    'imagen' => 'hotel',
 		    'texto' => 'Hotel',
 	    ],
     ];
@@ -284,7 +284,7 @@
                         <div class="grid grid-cols-2 gap-4">
                             <?php foreach ( $propiedades as $propiedad ) : ?>
                             <div class="p-4 border border-gray-300 rounded-lg flex flex-col justify-between">
-                                <img src="<?php echo $propiedad['imagen']; ?>" alt="" class="mb-4 w-8">
+                                <img src="/assets/images/filters/<?php echo $propiedad['imagen']; ?>.png" alt="" class="mb-4 w-8">
                                 <span class="font-semibold">
                                     <?php echo $propiedad['texto']; ?>
                                 </span>
