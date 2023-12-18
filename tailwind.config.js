@@ -20,6 +20,8 @@ module.exports = {
             'text': ['Nunito','sans-serif'],
         }
     },
-    plugins: [],
+    plugins: [
+        require('@tailwindcss/forms'),
+    ],
 }
 
