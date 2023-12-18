@@ -788,6 +788,20 @@ video {
   gap: 0.75rem;
 }
 
+.gap-y-8 {
+  row-gap: 2rem;
+}
+
+.gap-y-4 {
+  row-gap: 1rem;
+}
+
+.space-y-4 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1rem * var(--tw-space-y-reverse));
+}
+
 .overflow-hidden {
   overflow: hidden;
 }
@@ -818,6 +832,10 @@ video {
 
 .rounded-xl {
   border-radius: 0.75rem;
+}
+
+.\!rounded-2xl {
+  border-radius: 1rem !important;
 }
 
 .border {
@@ -979,6 +997,11 @@ video {
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
+}
+
+.\!py-4 {
+  padding-top: 1rem !important;
+  padding-bottom: 1rem !important;
 }
 
 .pb-2 {

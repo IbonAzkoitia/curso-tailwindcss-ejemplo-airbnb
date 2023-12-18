@@ -69,7 +69,7 @@
 
 <div class="absolute top-0 w-full h-full bg-gray-50 flex flex-col justify-between"
 	x-show="searchModal"
-    x-data="{searchModalTabs: 1, searchModalFechasTabs: 1}">
+    x-data="{searchModalTabs: 1, searchModalFechasTabs: 1, searchCards: 1}">
 
 	<div class="relative p-6 flex items-center justify-center">
 		<div class="absolute left-6 border border-gray-400 bg-white p-2 rounded-full" @click="searchModal = false">
@@ -94,10 +94,24 @@
 		</div>
 	</div>
 
-	<div class="px-3 flex-grow" x-show="searchModalTabs === 1">
+	<div class="px-3 flex-grow space-y-4" x-show="searchModalTabs === 1">
 
 		<!-- Destinos -->
-		<div class="hidden searchCard overflow-hidden">
+        <div class="searchCard !py-4 !rounded-2xl flex items-center justify-between font-semibold text-sm"
+            :class="searchCards === 1 ? 'hidden' : ''"
+             @click="searchCards = 1"
+        >
+            <div class="text-[#717171]">
+                Destino
+            </div>
+
+            <div>
+                Búsqueda flexible
+            </div>
+        </div>
+		<div class="searchCard overflow-hidden"
+             :class="searchCards === 1 ? '' : 'hidden'"
+        >
 			<div class="text-xl font-extrabold">
 				¿Dónde quieres ir?
 			</div>
@@ -126,7 +140,21 @@
 		<!-- end Destinos -->
 
         <!-- Fechas -->
-        <div class="hidden searchCard">
+        <div class="searchCard !py-4 !rounded-2xl flex items-center justify-between font-semibold text-sm"
+             :class="searchCards === 2 ? 'hidden' : ''"
+             @click="searchCards = 2"
+        >
+            <div class="text-[#717171]">
+                Fechas
+            </div>
+
+            <div>
+                Añade fechas
+            </div>
+        </div>
+        <div class="searchCard"
+             :class="searchCards === 2 ? '' : 'hidden'"
+        >
             <div class="text-xl font-extrabold">
                 ¿Cuándo quieres viajar?
             </div>
@@ -541,7 +569,6 @@
                         </div>
                     </div>
 
-
                     <hr class="-mx-6 my-3">
 
                     <div class="-mx-6 pl-6 flex flex-nowrap whitespace-nowrap items-center overflow-x-scroll no-scrollbar gap-2 text-xs">
@@ -573,7 +600,8 @@
                             Omitir
                         </a>
 
-                        <button class="py-3 px-6 rounded-xl flex items-center gap-2 bg-[#222222] text-white">
+                        <button class="py-3 px-6 rounded-xl flex items-center gap-2 bg-[#222222] text-white"
+                                @click="searchCards = 3">
                             Siguiente
                         </button>
                     </div>
@@ -649,8 +677,22 @@
         </div>
         <!-- end Fechas -->
 
-        <!-- Cuántos -->
-        <div class="searchCard">
+        <!-- Viajeros -->
+        <div class="searchCard !py-4 !rounded-2xl flex items-center justify-between font-semibold text-sm"
+             :class="searchCards === 3 ? 'hidden' : ''"
+             @click="searchCards = 3"
+        >
+            <div class="text-[#717171]">
+                Viajeros
+            </div>
+
+            <div>
+                Añade viajeros
+            </div>
+        </div>
+        <div class="searchCard"
+             :class="searchCards === 3 ? '' : 'hidden'"
+        >
             <div class="text-xl font-extrabold">
                 ¿Cuántos sois?
             </div>
@@ -686,11 +728,11 @@
             <?php endforeach; ?>
 
         </div>
-        <!-- end Cuántos -->
+        <!-- end Viajeros -->
 	</div>
 
 	<div class="py-2 px-6 bg-white flex items-center justify-between"
-        :class="searchModalFechasTabs === 1 ? 'hidden' : ''">
+        :class="searchCards === 2 ? 'hidden' : ''">
 		<a href="#" class="font-semibold underline">
 			Restablecer
 		</a>
