@@ -30,3 +30,45 @@ h6 {
     @apply p-6 bg-white rounded-[24px]
 }
 
+table#SearchDates {
+    border-collapse: separate !important;
+    td {
+        box-sizing: border-box !important;
+        text-align: center !important;
+        position: relative !important;
+        cursor: default !important;
+        border: 0px !important;
+        color: rgb(34, 34, 34) !important;
+        padding: 0px !important;
+        background: rgb(255, 255, 255) !important;
+        width: 45px;
+        height: 43px;
+
+    }
+
+    .date {
+        -webkit-box-direction: normal !important;
+        -webkit-box-orient: vertical !important;
+        -webkit-box-pack: center !important;
+        -webkit-box-align: center !important;
+        margin-left: 1px !important;
+        margin-right: 1px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        flex-direction: column !important;
+        border-radius: 100% !important;
+        position: relative !important;
+        font-size: 0.875rem !important;
+        line-height: 1.125rem !important;
+        font-weight: 600 !important;
+        color: rgb(34, 34, 34) !important;
+        border: 1.5px solid rgb(255, 255, 255) !important;
+    }
+
+    .dateDisabled {
+        text-decoration: none !important;
+        opacity: 0.25 !important;
+        color: rgb(72, 72, 72) !important;
+    }
+}
