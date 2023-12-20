@@ -65,8 +65,6 @@
 
 ?>
 
-<div class="h-[600px]"></div>
-
 <!-- Inspiraciones -->
 <div class="py-12 px-6 bg-[#F7F7F7]">
     <h2 class="text-xl font-semibold">
@@ -115,6 +113,7 @@
         </div>
     </div>
 
+</div>
 </div>
 <!-- end Inspiraciones -->
 
