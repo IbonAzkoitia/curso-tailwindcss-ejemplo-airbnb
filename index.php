@@ -20,7 +20,10 @@
 
 	<link rel="stylesheet" href="assets/css/style-production.css" />
 </head>
-<body class="relative">
+<body class="relative"
+      x-data="{map: false, menu: false}"
+      @scroll.window="map = window.pageYOffset > 200 ? true : false; menu = window.pageYOffset > 400 ? true : false"
+>
 <?php require 'components/header.php'; ?>
 
 <main>
@@ -436,7 +439,14 @@
 </main>
 
 <!-- Mapa -->
-<div class="fixed w-full flex justify-center bottom-20 z-50">
+<div class="fixed w-full flex justify-center z-50 bottom-20"
+     x-show="map"
+     x-transition:enter="transition ease-out duration-300"
+     x-transition:enter-start="opacity-0 scale-90"
+     x-transition:enter-end="opacity-100 scale-100"
+     x-transition:leave="transition ease-in duration-300"
+     x-transition:leave-start="opacity-100 scale-100"
+     x-transition:leave-end="opacity-0 scale-90">
     <button class="py-2 px-5 text-sm text-white bg-[#222222] rounded-full flex items-center gap-2">
         Mapa
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" role="presentation" focusable="false" style="display: block; height: 16px; width: 16px; fill: rgb(255, 255, 255);"><path d="M31.25 3.75a2.29 2.29 0 0 0-1.01-1.44A2.29 2.29 0 0 0 28.5 2L21 3.67l-10-2L2.5 3.56A2.29 2.29 0 0 0 .7 5.8v21.95a2.28 2.28 0 0 0 1.06 1.94A2.29 2.29 0 0 0 3.5 30L11 28.33l10 2 8.49-1.89a2.29 2.29 0 0 0 1.8-2.24V4.25a2.3 2.3 0 0 0-.06-.5zM12.5 25.98l-1.51-.3L9.5 26H9.5V4.66l1.51-.33 1.49.3v21.34zm10 1.36-1.51.33-1.49-.3V6.02l1.51.3L22.5 6h.01v21.34z"></path></svg>
@@ -445,7 +455,14 @@
 <!-- end Mapa -->
 
 <!-- Footer Nav -->
-<div class="fixed w-full py-3 border-t border-gray-300 bg-white flex justify-center items-center gap-8 bottom-0 z-50">
+<div class="fixed w-full py-3 border-t border-gray-300 bg-white flex justify-center items-center gap-8 bottom-0 z-50 transition duration-500"
+     x-show="menu"
+     x-transition:enter="transition ease-out duration-300"
+     x-transition:enter-start="opacity-0 translate-y-20"
+     x-transition:enter-end="opacity-100 translate-y-0"
+     x-transition:leave="transition ease-in duration-300"
+     x-transition:leave-start="opacity-100 translate-y-0"
+     x-transition:leave-end="opacity-0 translate-y-20">
     <a href="#" class="text-red-500 text-xs font-semibold">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" data-slot="icon" class="w-7 h-7 mx-auto">
             <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
