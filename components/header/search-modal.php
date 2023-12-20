@@ -67,7 +67,7 @@
     ];
 ?>
 
-<div class="absolute top-0 w-full h-full bg-gray-50 flex flex-col justify-between"
+<div class="absolute top-0 w-full h-full bg-gray-50 flex flex-col justify-between z-50"
 	x-show="searchModal"
     x-data="{searchModalTabs: 1, searchModalFechasTabs: 1, searchCards: 1}">
 

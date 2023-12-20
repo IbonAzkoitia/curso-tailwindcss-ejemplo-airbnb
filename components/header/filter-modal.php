@@ -80,7 +80,7 @@
 ?>
 
 
-<div class="relative z-10" aria-labelledby="modal-title" role="dialog" aria-modal="true"
+<div class="relative z-50" aria-labelledby="modal-title" role="dialog" aria-modal="true"
      x-show="filterModal">
 	<!--
 	  Background backdrop, show/hide based on modal state.
@@ -156,7 +156,7 @@
 							Precios por noche con comisiones e impuestos incluidos
 						</p>
 
-                        <img src="/assets/images/filters/graphs.png" alt="" class="mb-4 w-full">
+                        <img src="/assets/images/filters/modal/graphs.png" alt="" class="mb-4 w-full">
 
 						<div class="grid grid-cols-5 items-center">
                             <div class="col-span-2 py-1.5 px-3 border border-gray-400 rounded-lg">
@@ -284,7 +284,7 @@
                         <div class="grid grid-cols-2 gap-4">
                             <?php foreach ( $propiedades as $propiedad ) : ?>
                             <div class="p-4 border border-gray-300 rounded-lg flex flex-col justify-between">
-                                <img src="/assets/images/filters/<?php echo $propiedad['imagen']; ?>.png" alt="" class="mb-4 w-8">
+                                <img src="/assets/images/filters/modal/<?php echo $propiedad['imagen']; ?>.png" alt="" class="mb-4 w-8">
                                 <span class="font-semibold">
                                     <?php echo $propiedad['texto']; ?>
                                 </span>
