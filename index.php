@@ -27,7 +27,7 @@
 <?php require 'components/header.php'; ?>
 
 <main>
-    <div class="p-6 lg:pb-20 grid grid-cols-1 lg:grid-cols-3 gap-y-10 gap-x-5">
+    <div class="p-6 lg:pb-20 lg:px-10 grid grid-cols-1 lg:grid-cols-3 gap-y-10 gap-x-5">
         <div class="col-span-1">
             <div>
                 <!-- Carousel -->
