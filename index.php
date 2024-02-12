@@ -123,7 +123,7 @@
                             <!-- end Navigation -->
 
                             <!-- Indicators -->
-                            <div class="absolute z-50 w-full bottom-4">
+                            <div class="absolute z-10 w-full bottom-4">
                                 <div class="flex justify-center space-x-2">
                                     <template x-for="(slide, index) in Array.from($refs.slider.children)" :key="index">
                                         <button @click="goToSlide(index)" :class="{'bg-gray-100': currentSlide === index, 'bg-gray-300': currentSlide !== index}" class="w-1.5 h-1.5 rounded-full hover:bg-gray-500 focus:outline-none focus:bg-gray-500"></button>
@@ -265,7 +265,7 @@
                             <!-- end Navigation -->
 
                             <!-- Indicators -->
-                            <div class="absolute z-50 w-full bottom-4">
+                            <div class="absolute z-10 w-full bottom-4">
                                 <div class="flex justify-center space-x-2">
                                     <template x-for="(slide, index) in Array.from($refs.slider.children)" :key="index">
                                         <button @click="goToSlide(index)" :class="{'bg-gray-100': currentSlide === index, 'bg-gray-300': currentSlide !== index}" class="w-1.5 h-1.5 rounded-full hover:bg-gray-500 focus:outline-none focus:bg-gray-500"></button>
@@ -393,7 +393,7 @@
                             <!-- end Navigation -->
 
                             <!-- Indicators -->
-                            <div class="absolute z-50 w-full bottom-4">
+                            <div class="absolute z-10 w-full bottom-4">
                                 <div class="flex justify-center space-x-2">
                                     <template x-for="(slide, index) in Array.from($refs.slider.children)" :key="index">
                                         <button @click="goToSlide(index)" :class="{'bg-gray-100': currentSlide === index, 'bg-gray-300': currentSlide !== index}" class="w-1.5 h-1.5 rounded-full hover:bg-gray-500 focus:outline-none focus:bg-gray-500"></button>
@@ -531,7 +531,7 @@
                             <!-- end Navigation -->
 
                             <!-- Indicators -->
-                            <div class="absolute z-50 w-full bottom-4">
+                            <div class="absolute z-10 w-full bottom-4">
                                 <div class="flex justify-center space-x-2">
                                     <template x-for="(slide, index) in Array.from($refs.slider.children)" :key="index">
                                         <button @click="goToSlide(index)" :class="{'bg-gray-100': currentSlide === index, 'bg-gray-300': currentSlide !== index}" class="w-1.5 h-1.5 rounded-full hover:bg-gray-500 focus:outline-none focus:bg-gray-500"></button>
@@ -669,7 +669,7 @@
                             <!-- end Navigation -->
 
                             <!-- Indicators -->
-                            <div class="absolute z-50 w-full bottom-4">
+                            <div class="absolute z-10 w-full bottom-4">
                                 <div class="flex justify-center space-x-2">
                                     <template x-for="(slide, index) in Array.from($refs.slider.children)" :key="index">
                                         <button @click="goToSlide(index)" :class="{'bg-gray-100': currentSlide === index, 'bg-gray-300': currentSlide !== index}" class="w-1.5 h-1.5 rounded-full hover:bg-gray-500 focus:outline-none focus:bg-gray-500"></button>
@@ -796,7 +796,7 @@
                             <!-- end Navigation -->
 
                             <!-- Indicators -->
-                            <div class="absolute z-50 w-full bottom-4">
+                            <div class="absolute z-10 w-full bottom-4">
                                 <div class="flex justify-center space-x-2">
                                     <template x-for="(slide, index) in Array.from($refs.slider.children)" :key="index">
                                         <button @click="goToSlide(index)" :class="{'bg-gray-100': currentSlide === index, 'bg-gray-300': currentSlide !== index}" class="w-1.5 h-1.5 rounded-full hover:bg-gray-500 focus:outline-none focus:bg-gray-500"></button>

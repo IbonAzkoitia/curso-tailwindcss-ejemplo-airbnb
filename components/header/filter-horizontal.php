@@ -52,7 +52,7 @@
 ?>
 
 <!-- Filters -->
-<div class="mt-4 lg:mt-8 px-6 lg:px-10 flex justify-between items-stretch gap-0">
+<div class="mt-4 lg:mt-6 px-6 lg:px-10 flex justify-between items-stretch gap-0 border-t border-gray-200 lg:py-6">
     <!-- Filter » Horizontal -->
     <div class="border-b-4 border-[#f5f5f5] lg:border-0 flex flex-nowrap items-center gap-6 lg:gap-10 overflow-x-auto no-scrollbar">
         <?php foreach ( $alojamientos as $index => $alojamiento ) : ?>
